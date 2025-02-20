@@ -46,6 +46,7 @@ class Build : NukeBuild
 
     Target Compile => _ => _
         .DependsOn(Restore)
+        .Triggers(PrintSomeInformation)
         .Executes(() =>
         {
         });
